@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sciensa</title>
+
+    <style>
+    
+        .flex-container {
+            display: flex;
+            /*height: 500px;  */
+            flex-direction: row;  /*row (todos os itens em uma linha), column(cada um em uma linha)*/
+            justify-content: flex-start; 
+                /* (responsável pela horizontal se o content for row)
+                center, 
+                flex-start (default, por isso fica a esquerda), 
+                flex-end (fica na direita), 
+                space-between(espaço entre eles),
+                space-around (espaço ao redor)
+                */
+            align-items: center;
+                /* baseado no eixo; (responsável pela vertical se o justify content for row)
+                stretch (default - estica os elementos), flex-start, flex-end, center, baseline 
+    
+                */
+            background-color: blue;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 40px;
+            flex-grow: 1; /*divide por três igualmente*/
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    
+    <!--Soma os grows e divide certinho conforme o tamanho incluido para cada um deles-->
+    <!-- mas o grow respeita o conteúdo, entao se o primeiro cara tiver um conteudo mto grande, 
+         o grow vai colocar espaço a mais pra ele... aí usa o flex ao invés do flex-grow.
+
+        flex-shrink -> respeitar um valor minimo (raramente usa)
+        flex-basis -> valor minimo
+    -->
+</body>
+</html>
