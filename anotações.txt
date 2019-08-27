@@ -105,3 +105,150 @@ DISPLAY FlexBox:
     -> diferença entre margin e padding;
 
     -> margin: 10px 5px 20px 15px sempre no sentido horário
+    
+    
+   -----------------------------------------------------
+  
+  Javascript:
+    -> tipagem dinamica (nao declara variável)
+    
+    
+    Diferença entre var, let e const:
+        - let pode ser declarado dentro de um escopo, então não consegue ser visto em outro escopo; 
+            Não pode ser declarado duas vezes;  
+        - var pode ser declarado várias vezes; então acontecia de sobrepor quando tinha cdigo mto grande;
+        - const não alterar o valor;
+   
+    Para alterar uma constante, vc cria uma constante de objeto e altera o valor de uma propriedade do objeto
+   
+    Boas práticas: 
+        - Usar aspas simples;
+        - Não usar var;
+        
+        
+   **********************************************
+   import "./styles.css";
+
+document.getElementById("app").innerHTML = `
+<h1>Hello Vanilla!</h1>
+<div>
+  We use Parcel to bundle this sandbox, you can find more info about Parcel
+  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+</div>
+`;
+
+console.log('abc');
+
+var linguagens = 'Javascript'
+
+console.log(linguagens)
+
+var linguagens = 444;
+
+console.log(linguagens);
+
+let alo = "hauihdaiuhd"
+alo = 23232424
+
+const constante = "aqui eh uma constante"
+
+console = 2
+
+const aloho = function () {
+
+}
+
+const alo2 = 10
+
+let pessoa = {
+  nome: ''
+}
+
+
+let tipo = {
+  nome: ''
+}
+
+tipo.nome = 'iahiuahsah'
+
+tipo.funcao = function () {
+  console.log('eu sou uma funcao')
+}
+
+tipo.funcao();
+
+let ator1 = 'brad pitt'
+
+console.log(typeof ator1);
+
+let qqcoisa = [1, 2, 3]
+
+//o typeof nao identifica array
+console.log(typeof qqcoisa)
+console.log(Array.isArray(qqcoisa))
+
+//acessar item
+console.log(qqcoisa[0])
+
+
+let qqcoisa2 = [{ name: 'jaqueline' }, 2]
+
+qqcoisa2[0].name = 5
+console.log(qqcoisa2[0].name)
+
+//verificar se um objeto existe
+//VERIFICAR DPS
+
+let ator = {
+  name: 'Brad',
+  age: 50
+}
+
+let filmes = [
+  {
+    name: 'Avengers',
+    ano: 2019,
+    atores: ['Brad', 'Scarlett']
+  }
+]
+
+filmes[0].atores = ator;
+
+let soma = 1 + 2
+console.log(soma);
+
+console.log(10 - 1);
+console.log(10 / 2);
+console.log(10 % 2 === 0);
+
+console.log('Jaqueline' + ' ' + 'Kirino');
+
+let numero = 2
+let numero2 = 3
+let numero3 = '1'
+console.log(numero + numero3) //concatena
+console.log(numero + numero3 + numero2) //concatena
+console.log(numero + numero2 + numero3) //soma primeiro, dps concatena (segue ordem)
+
+//javascript sempre considera da esquerda pra direita;
+
+let nome = 'Maria'
+let sobrenome = 'Silva'
+
+// template literais
+let nomeSobrenome = `Sr(a) ${nome} ${1 + 2}`
+
+console.log(nomeSobrenome);
+
+let array2 = [1 - 2];
+let array3 = [3, 4];
+
+console.log(array2.concat(array3));
+
+   **********************************************
+        
+        
+        
+        
+        
+        
