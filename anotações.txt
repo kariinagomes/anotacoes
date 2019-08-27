@@ -1,41 +1,41 @@
     <style>
-        qualquer div se comporta assim
+        qualquer div se comportará assim:
         div {
             background-color: green;
             width: 100px;
             height: 100px;
         }
 
-        só os que tiverem essa classe
+        só os que tiverem essa classe:
         .classe-teste {
             background-color: red;
         }
 
-        só os que tiverem id
+        só os que tiverem id: 
         #id-teste {
             background-color: yellow;
         }
     </style>
 
 
-    div = 1
-    class = 10
-    id = 100
-    div + classe = 11
-    classe + classse = 20
-    se tiver duas classes iguais -> considera a última (css é cascata)
+    Pontos:
+        div = 1
+        class = 10
+        id = 100
+        div + classe = 11
+        classe + classse = 20
+        
+        se tiverem duas classes iguais -> considera a última (css é cascata)
+        
 
-
-    a vírgula significa o mesmo comportamento
+    Quando usa vírgula significa que ambos terão o mesmo comportamento:
     .classe-teste, .classe-test2 {
         background-color: yellow;
     }
 
-
     width + body
 
     Identificar o elemento principal e modificar os que estão após dele:
-
         <style>
 
             .mae {
@@ -62,39 +62,31 @@
 
         </style>
 
+* POSITION *
 
+- Position não é de layout, é um comportamento específico; 
+- O position static (que é o default do position) não aceita top, left... (tem declarar uma position pra isso); 
+- Primeiro monta o layout, e depois move (conforme top e left), ou seja, só muda pra top e left depois que 
+  renderiza a primeira vez. É muito usado pra animação);
+- Animação com css é menos custoso.
+- Diferença entre position relative e absolute: o relative leva em consideração os irmãos e o pai, já o absolute leva em consideração somente o pai;
+- O relative sempre leva em consideração o primeiro relative que encontrar;
+- O position fixed fica isoladão (muito usado pra header);
 
-position não é de layout, é um comportamento especifico 
-o position static não aceita top, left... (tem declarar uma position 
-Primeiro montou o layout, e depois moveu - o top e left (ou seja, só muda pra top e left depois que 
-renderiza a primeira vez. Mto usado pra animação)
-Animação com css é menos custoso.
-Leva em consideração o pai
+- Se tiver uma cadeia de divs, sempre vai respeitar quem tem o position.. se nenhum tiver, segue o body. Se nenhum tiver o position relative, não muda nada; (?)
 
-Body com padding 5 é padrão;
+- Os absolutes estão isolados um do outro;
 
-A diferença entre o relative e absolute é que o relative leva em consideração o pai e os irmãos;
-já o absolute leva em consideração apenas o pai.
-O fixed fica isolado;
+- Body com padding 5 é padrão;
 
-Se tiver uma cadeia de divs, sempre vai respeitar quem tem o position.. se nenhum tiver, segue o body.
-Se nenhum tiver o position relative, não muda nada
+* DISPLAY *
 
-O relative sempre leva em consideração o primeiro relative que encontrar;
-
-Os absolutes estão isolados um do outro;
-
-
-
-
-DISPLAY:
-    Block: peixe beta...vive sozinho no aquario (pega uma linha inteira);
-    Inline: feito para palavras (só paragrafo q nao, mas span sim), não possue caixa (convive normalmente
-            com outros). Como inline não tem altura nem largura, ele sumiria se nao escrever nada;
-            Ele inclusive coloca um espaço natural entre os dois, tipo entre palavras.
-    Inline-block: 
+- Block: peixe beta...vive sozinho no aquÁrio (pega uma linha inteira);
+- Inline: feito para palavras (só parágrafo q não por ser block, mas span sim), não possue caixa (convive normalmente
+          com outros). Como inline não tem altura nem largura, ele sumiria se nao escrever nada;
+          Ele inclusive coloca um espaço natural entre os dois, tipo entre palavras.
+- Inline-block: 
     None: o elemento some da tela;
-
     se for mudar de block pra inline, mude para inline-block;
 
 
