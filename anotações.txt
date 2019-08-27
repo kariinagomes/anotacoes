@@ -124,130 +124,240 @@ DISPLAY FlexBox:
     Boas práticas: 
         - Usar aspas simples;
         - Não usar var;
-        
+        - Usar === ao invés de == 
+            assim como !== ao invés de !=
         
    **********************************************
-   import "./styles.css";
+   
+   OQ FIZEMOS NO codesandbox:
+   
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use Parcel to bundle this sandbox, you can find more info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+    import "./styles.css";
 
-console.log('abc');
+    document.getElementById("app").innerHTML = `
+    <h1>Hello Vanilla!</h1>
+    <div>
+      We use Parcel to bundle this sandbox, you can find more info about Parcel
+      <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+    </div>
+    `;
 
-var linguagens = 'Javascript'
+    console.log('abc');
 
-console.log(linguagens)
+    var linguagens = 'Javascript'
 
-var linguagens = 444;
+    console.log(linguagens)
 
-console.log(linguagens);
+    var linguagens = 444;
 
-let alo = "hauihdaiuhd"
-alo = 23232424
+    console.log(linguagens);
 
-const constante = "aqui eh uma constante"
+    let alo = "hauihdaiuhd"
+    alo = 23232424
 
-console = 2
+    const constante = "aqui eh uma constante"
 
-const aloho = function () {
+    console = 2
 
-}
+    const aloho = function () {
 
-const alo2 = 10
+    }
 
-let pessoa = {
-  nome: ''
-}
+    const alo2 = 10
 
-
-let tipo = {
-  nome: ''
-}
-
-tipo.nome = 'iahiuahsah'
-
-tipo.funcao = function () {
-  console.log('eu sou uma funcao')
-}
-
-tipo.funcao();
-
-let ator1 = 'brad pitt'
-
-console.log(typeof ator1);
-
-let qqcoisa = [1, 2, 3]
-
-//o typeof nao identifica array
-console.log(typeof qqcoisa)
-console.log(Array.isArray(qqcoisa))
-
-//acessar item
-console.log(qqcoisa[0])
+    let pessoa = {
+      nome: ''
+    }
 
 
-let qqcoisa2 = [{ name: 'jaqueline' }, 2]
+    let tipo = {
+      nome: ''
+    }
 
-qqcoisa2[0].name = 5
-console.log(qqcoisa2[0].name)
+    tipo.nome = 'iahiuahsah'
 
-//verificar se um objeto existe
-//VERIFICAR DPS
+    tipo.funcao = function () {
+      console.log('eu sou uma funcao')
+    }
 
-let ator = {
-  name: 'Brad',
-  age: 50
-}
+    tipo.funcao();
 
-let filmes = [
-  {
-    name: 'Avengers',
-    ano: 2019,
-    atores: ['Brad', 'Scarlett']
-  }
-]
+    let ator1 = 'brad pitt'
 
-filmes[0].atores = ator;
+    console.log(typeof ator1);
 
-let soma = 1 + 2
-console.log(soma);
+    let qqcoisa = [1, 2, 3]
 
-console.log(10 - 1);
-console.log(10 / 2);
-console.log(10 % 2 === 0);
+    //o typeof nao identifica array
+    console.log(typeof qqcoisa)
+    console.log(Array.isArray(qqcoisa))
 
-console.log('Jaqueline' + ' ' + 'Kirino');
+    //acessar item
+    console.log(qqcoisa[0])
 
-let numero = 2
-let numero2 = 3
-let numero3 = '1'
-console.log(numero + numero3) //concatena
-console.log(numero + numero3 + numero2) //concatena
-console.log(numero + numero2 + numero3) //soma primeiro, dps concatena (segue ordem)
 
-//javascript sempre considera da esquerda pra direita;
+    let qqcoisa2 = [{ name: 'jaqueline' }, 2]
 
-let nome = 'Maria'
-let sobrenome = 'Silva'
+    qqcoisa2[0].name = 5
+    console.log(qqcoisa2[0].name)
 
-// template literais
-let nomeSobrenome = `Sr(a) ${nome} ${1 + 2}`
+    //verificar se um objeto existe
+    //VERIFICAR DPS
 
-console.log(nomeSobrenome);
+    let ator = {
+      name: 'Brad',
+      age: 50
+    }
 
-let array2 = [1 - 2];
-let array3 = [3, 4];
+    let filmes = [
+      {
+        name: 'Avengers',
+        ano: 2019,
+        atores: ['Brad', 'Scarlett']
+      }
+    ]
 
-console.log(array2.concat(array3));
+    filmes[0].atores = ator;
+
+    let soma = 1 + 2
+    console.log(soma);
+
+    console.log(10 - 1);
+    console.log(10 / 2);
+    console.log(10 % 2 === 0);
+
+    console.log('Jaqueline' + ' ' + 'Kirino');
+
+    let numero = 2
+    let numero2 = 3
+    let numero3 = '1'
+    console.log(numero + numero3) //concatena
+    console.log(numero + numero3 + numero2) //concatena
+    console.log(numero + numero2 + numero3) //soma primeiro, dps concatena (segue ordem)
+
+    //javascript sempre considera da esquerda pra direita;
+
+    let nome = 'Maria'
+    let sobrenome = 'Silva'
+
+    // template literais
+    let nomeSobrenome = `Sr(a) ${nome} ${1 + 2}`
+
+    console.log(nomeSobrenome);
+
+    let array2 = [1 - 2];
+    let array3 = [3, 4];
+
+    console.log(array2.concat(array3));
+
+    // condicionais:
+
+    const info = {
+      name: 'Joao',
+      age: 30, 
+      isActive: true
+    }
+
+    // só o fato de ter alguma informação ele passa
+    //result: true
+    if(info.name) {
+      console.log('ok')
+    } else {
+      console.log('nok')
+    }
+
+    //result: false
+    if(info.abacaxi) {
+      console.log('ok')
+    } else {
+      console.log('nok!!!')
+    }
+
+    //result: ok (pq converteu)
+    if(info.age >= '30') {
+      console.log('ok')
+    } else {
+      console.log('nok!!!')
+    }
+
+    //result: true (nem leu o age pq é ou)
+    if(info.name === 'Jaqueline' || info.age >= '30') {
+      console.log('ok')
+    } else {
+      console.log('nok!!!')
+    }
+
+    //TERNÁRIOS
+
+    //result: false pq não sou a maria
+    let qualquercoisa = info.isActive && info.name === 'Maria' ? 'Olha ela tá ativa' : 'Não tá ativa'
+    console.log(qualquercoisa);
+
+    //se não colocar o break, continua passsando
+    const dia = 3
+    switch(dia) {
+      case 1:
+        console.log('dia 1')
+        break;
+      case 2:
+        console.log('dia 2')
+        alert('Olá');
+        break;
+      case 3:
+        console.log('dia 3')
+        break;
+      default:
+        console.log('dia4')
+        break;
+    }
+
+    //FUNÇÕES
+
+    function somar(numero1, numero2) {
+      return numero1 + numero2
+    }
+    console.log(somar(1, 2))
+
+    const somar2 = function (numero1, numero2) {
+      return numero1 = numero2
+    }
+    console.log(somar2(2,3))
+
+    const somar3 = (num1, num2) => {
+      return num1 + num2
+    }
+    console.log(somar(3,5))
+
+    const somar4 = (num1, num2) => num1 + num2
+    console.log(somar4(3,5))
+
+    const alofruta = fruta => console.log(fruta)
+    alofruta('abacaxi')
+
 
    **********************************************
-        
-        
+   EXERCÍCIO:
+   
+   //Crie uma função que recebe por parâmetro a idade e retorne
+   //se é maior ou nao
+
+    const maiorIdade = idade => {
+      return idade >= 18
+    }
+    console.log(maiorIdade(23));
+
+    const maiorIdade2 = idade => idade >= 18
+    console.log(maiorIdade2(18))
+
+    const maiorIdade3 = idade => idade >= 18 ? 'Maior' : 'Menor'
+    console.log(maiorIdade3(18));
+
+    const maiorIdade4 = idade => {
+      if(idade >= 18) return 'Maior'
+      return 'Menor'
+    }
+    console.log(maiorIdade4(20))
+
         
         
         
