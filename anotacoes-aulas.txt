@@ -158,3 +158,13 @@ DISPLAY FlexBox:
         </h6>
         e no outro arquivo...
         <ComponenteFuncao textooo="lalala">aqui eh sempre children</ComponenteFuncao>
+        
+        
+   -> Estado são variáveis que podem ser usadas dentro do componente:
+        Por hora, classe é usada qndo tem estado
+       
+  O render é para mostrar na tela, e é chamado novamente toda vez que o estado ou props;
+  O constructor roda antes mesmo de renderizar a tela;
+  
+  (não replicar o props no estado, pode ter algo errado(?), mas existe exceçoes)
+  
