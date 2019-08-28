@@ -150,3 +150,11 @@ DISPLAY FlexBox:
         -> Não pode alterar o props (e se precisasse alterar, pode ser que tenha algo errado)
                 Cria um novo carinha, tipo "let funcaoDoida = props.text" e retorna o funcaoDoida ao invés do props
         
+    Props.children é tudo o que tá dentro do corpo (lembrar do exemplo dos filhinhos do div); 
+    Também pode usar os dois juntos, tipo:
+        <h6>
+            {props.textooo}
+            {props.children}
+        </h6>
+        e no outro arquivo...
+        <ComponenteFuncao textooo="lalala">aqui eh sempre children</ComponenteFuncao>
