@@ -131,4 +131,22 @@ DISPLAY FlexBox:
      -> Também vimos sobre DOM
        (o arquivo está na máquina da sciensa... lembrar de subir aqui
         
+  ----------------------------------------------------------------------------------
+    -> REACT
+    
+    (com map já posso responder o componente)
+    
+    Vantagens do React:
+        * Tem o Virtual DOM
+        * É one way 
+        
+    Boas práticas:
+        - Iniciar o componente com letra maiúscula
+        
+    Stateless Component
+    
+    Props é uma junção dos atributos passados para o componente
+        -> O props pode receber qualquer coisa, inclusive função;
+        -> Não pode alterar o props (e se precisasse alterar, pode ser que tenha algo errado)
+                Cria um novo carinha, tipo "let funcaoDoida = props.text" e retorna o funcaoDoida ao invés do props
         
