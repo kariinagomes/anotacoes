@@ -210,3 +210,5 @@ DISPLAY FlexBox:
  Quando o cara é bom em ecmascript, o cara se vira em qlqr uma.. pq é o coração de javascript
  
  
+ -> HOOKS
+    Transformar uma função em um componente de classe (levar o ciclo de vida de uma classe para uma função, mto doido)
