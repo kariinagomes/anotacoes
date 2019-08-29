@@ -183,7 +183,7 @@ DISPLAY FlexBox:
   //---------------------------------------------------------------------------------------//
   (https://pt-br.reactjs.org/docs/react-component.html)
   
-  Ordem das chamadas em cada uma delas - mouting, updating e unmounting:
+  Ordem - mouting, updating e unmounting:
   - mounting: 
             constructor, 
             getDerivedStateFromProps, 
@@ -201,4 +201,8 @@ DISPLAY FlexBox:
   Tratamento de Erros (estes métodos são chamados quando existir um erro durante a renderização, em um método do ciclo de                          vida, ou no construtor de qualquer componente-filho)
   - getDerivedStateFromError
   - componentDidCatch
-  //---------------------------------------------------------------------------------------//
+ 
+    
+    O setState que é responsável por atualizar, ou seja, ele executa o ciclo de vida do update.
+ //---------------------------------------------------------------------------------------//
+ 
