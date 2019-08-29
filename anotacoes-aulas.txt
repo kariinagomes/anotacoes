@@ -189,7 +189,7 @@ DISPLAY FlexBox:
             getDerivedStateFromProps, 
             render, 
             componentDidMount
-  - updating: 
+  - updating (isso aqui é consequência da mudança de estado ou de props, tem como parametro o prevProps e PrevState): 
             getDerivedStateFromProps, 
             shouldComponentUpdate, 
             render, 
