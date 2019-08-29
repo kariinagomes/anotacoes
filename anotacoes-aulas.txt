@@ -206,3 +206,7 @@ DISPLAY FlexBox:
     O setState que é responsável por atualizar, ou seja, ele executa o ciclo de vida do update.
  //---------------------------------------------------------------------------------------//
  
+ É muito bom estudar EcmaScript -> ES6
+ Quando o cara é bom em ecmascript, o cara se vira em qlqr uma.. pq é o coração de javascript
+ 
+ 
