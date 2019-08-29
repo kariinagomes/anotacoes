@@ -150,6 +150,9 @@ DISPLAY FlexBox:
         -> Não pode alterar o props (e se precisasse alterar, pode ser que tenha algo errado)
                 Cria um novo carinha, tipo "let funcaoDoida = props.text" e retorna o funcaoDoida ao invés do props
         
+        -> Atributos são as propriedades da tag
+        -> Vc passa o atributo para o filho
+        
     Props.children é tudo o que tá dentro do corpo (lembrar do exemplo dos filhinhos do div); 
     Também pode usar os dois juntos, tipo:
         <h6>
@@ -168,3 +171,34 @@ DISPLAY FlexBox:
   
   (não replicar o props no estado, pode ter algo errado(?), mas existe exceçoes)
   
+  ----
+  -> CICLO DE VIDA
+  
+  Uncrotolled component
+  
+  onChange é um evento do input; (toda vez que existe uma alteração, ele faz algo)
+  .target -> para selecionar o evento
+  event.target.value -> valor q esta digitando
+  
+  //---------------------------------------------------------------------------------------//
+  (https://pt-br.reactjs.org/docs/react-component.html)
+  
+  Ordem das chamadas em cada uma delas - mouting, updating e unmounting:
+  - mounting: 
+            constructor, 
+            getDerivedStateFromProps, 
+            render, 
+            componentDidMount
+  - updating: 
+            getDerivedStateFromProps, 
+            shouldComponentUpdate, 
+            render, 
+            getSnapshotBeforeUpdate,
+            componentDidUpdate
+  - unmounting: 
+            componentWillUnmount
+  
+  Tratamento de Erros (estes métodos são chamados quando existir um erro durante a renderização, em um método do ciclo de                          vida, ou no construtor de qualquer componente-filho)
+  - getDerivedStateFromError
+  - componentDidCatch
+  //---------------------------------------------------------------------------------------//
