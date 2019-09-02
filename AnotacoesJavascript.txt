@@ -64,8 +64,14 @@ let qqcoisa2 = [{ name: 'jaqueline' }, 2]
 qqcoisa2[0].name = 5
 console.log(qqcoisa2[0].name)
 
-//verificar se um objeto existe: (CONFIRMEM SE É ISSO MSM RISOS)
-//array.hasOwnProperty
+//verificar se um objeto existe:
+//array.hasOwnProperty();
+//exemplo:
+  o = new Object();
+  o.propUm = null;
+  o.hasOwnProperty('propUm'); // retorna true
+  o.propDois = undefined;
+  o.hasOwnProperty('propDois'); // retorna true
 
 let ator = {
   name: 'Brad',
@@ -103,13 +109,13 @@ console.log(numero + numero2 + numero3) //soma primeiro, dps concatena (segue or
 let nome = 'Maria'
 let sobrenome = 'Silva'
 
-// TEMPLATE LITERAIS
-let nomeSobrenome = `Sr(a) ${nome} ${1 + 2}`
+// TEMPLATE LITERALS
+  let nomeSobrenome = `Sr(a) ${nome} ${1 + 2}`
 
-console.log(nomeSobrenome);
+  console.log(nomeSobrenome);
 
-let array2 = [1 - 2];
-let array3 = [3, 4];
+  let array2 = [1 - 2];
+  let array3 = [3, 4];
 
 console.log(array2.concat(array3));
 
@@ -200,7 +206,6 @@ alofruta('abacaxi')
 //Crie uma função que recebe por parâmetro a idade e retorne
 //se é maior ou nao
 
-
 const maiorIdade = idade => {
   return idade >= 18
 }
@@ -222,29 +227,29 @@ console.log(maiorIdade4(20))
 // retorne medalha, 1 = ouro, 2 = prata, 3 = bronze
 
 //***************************************************
-// INICIO JEITO ERRADO
-let numeros = [{
-    numero: 1,
-    mensagem: 'Ouro'
-  }, {
-    numero: 2,
-    mensagem: 'Prata'
-  }, {
-    numero: 3,
-    mensagem: 'Bronze'
-  }
-]
+// INICIO JEITO "ERRADO"
+      let numeros = [{
+          numero: 1,
+          mensagem: 'Ouro'
+        }, {
+          numero: 2,
+          mensagem: 'Prata'
+        }, {
+          numero: 3,
+          mensagem: 'Bronze'
+        }
+      ]
 
-const medalha = numero => {
-  for (let index = 0; index < numeros.length; index++) {
-    if (numeros[index].numero === numero)
-      return numeros[index].mensagem;  
-    
-    return 'Não viaja'  
-  }
-}
-console.log(medalha(1))
-// FIM JEITO ERRADO
+      const medalha = numero => {
+        for (let index = 0; index < numeros.length; index++) {
+          if (numeros[index].numero === numero)
+            return numeros[index].mensagem;  
+
+          return 'Não viaja'  
+        }
+      }
+      console.log(medalha(1))
+// FIM JEITO "ERRADO"
 //***************************************************
 
 const qualMedalha = num => {
@@ -317,8 +322,6 @@ const retornaParesSemIf = numeros => {
 }
 
 retornaParesSemIf(numeros)
-
-
 
 linguagens.forEach(element => {
   console.log(element)
