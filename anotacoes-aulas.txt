@@ -64,47 +64,47 @@
 
 * POSITION *
 
-- Position não é de layout, é um comportamento específico; 
-- O position static (que é o default do position) não aceita top, left... (tem declarar uma position pra isso); 
-- Primeiro monta o layout, e depois move (conforme top e left), ou seja, só muda pra top e left depois que 
-  renderiza a primeira vez. É muito usado pra animação);
-- Animação com css é menos custoso.
-- Diferença entre position relative e absolute: o relative leva em consideração os irmãos e o pai, já o absolute leva em consideração somente o pai;
-- O relative sempre leva em consideração o primeiro relative que encontrar;
-- O position fixed fica isoladão (muito usado pra header);
+    - Position não é de layout, é um comportamento específico; 
+    - O position static (que é o default do position) não aceita top, left... (tem declarar uma position pra isso); 
+    - Primeiro monta o layout, e depois move (conforme top e left), ou seja, só muda pra top e left depois que 
+      renderiza a primeira vez. É muito usado pra animação);
+    - Animação com css é menos custoso.
+    - Diferença entre position relative e absolute: o relative leva em consideração os irmãos e o pai, já o absolute leva em consideração somente o pai;
+    - O relative sempre leva em consideração o primeiro relative que encontrar;
+    - O position fixed fica isoladão (muito usado pra header);
 
-- Se tiver uma cadeia de divs, sempre vai respeitar quem tem o position.. se nenhum tiver, segue o body. Se nenhum tiver o position relative, não muda nada; (?)
+    - Se tiver uma cadeia de divs, sempre vai respeitar quem tem o position.. se nenhum tiver, segue o body. Se nenhum tiver o position relative, não muda nada; (?)
 
-- Os absolutes estão isolados um do outro;
+    - Os absolutes estão isolados um do outro;
 
-- Body com padding 5 é padrão;
+    - Body com padding 5 é padrão;
 
 * DISPLAY *
 
-- Block: peixe beta...vive sozinho no aquÁrio (pega uma linha inteira);
-- Inline: feito para palavras (só parágrafo q não por ser block, mas span sim), não possue caixa (convive normalmente
-          com outros). Como inline não tem altura nem largura, ele sumiria se nao escrever nada;
-          Ele inclusive coloca um espaço natural entre os dois, tipo entre palavras.
-- Inline-block: 
-    None: o elemento some da tela;
-    se for mudar de block pra inline, mude para inline-block;
+    - Block: peixe beta...vive sozinho no aquÁrio (pega uma linha inteira);
+    - Inline: feito para palavras (só parágrafo q não por ser block, mas span sim), não possue caixa (convive normalmente
+              com outros). Como inline não tem altura nem largura, ele sumiria se nao escrever nada;
+              Ele inclusive coloca um espaço natural entre os dois, tipo entre palavras.
+    - Inline-block: 
+        None: o elemento some da tela;
+        se for mudar de block pra inline, mude para inline-block;
 
 
-DISPLAY FlexBox:
-    - Facilita a criação de layout;
-    Divididos em container e item;
-        Container: diz como os itens vao funcionar
+    DISPLAY FlexBox:
+        - Facilita a criação de layout;
+        Divididos em container e item;
+            Container: diz como os itens vao funcionar
 
-    flex-direction: direção que vai seguir
-    justify-content e align-items -> 
+        flex-direction: direção que vai seguir
+        justify-content e align-items -> 
 
-    align-self -> usado quando vc quer que um item específico tenha um comportamento diferente;
+        align-self -> usado quando vc quer que um item específico tenha um comportamento diferente;
 
-    Orientado a conteúdo
+        Orientado a conteúdo
 
-    -> diferença entre margin e padding;
+        -> diferença entre margin e padding;
 
-    -> margin: 10px 5px 20px 15px sempre no sentido horário
+        -> margin: 10px 5px 20px 15px sempre no sentido horário
     
     
    -----------------------------------------------------
@@ -129,34 +129,57 @@ DISPLAY FlexBox:
         
   ----------------------------------------------------------------------------------
    -> Também vimos sobre DOM
+   
+     //no index.html            
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Sciensa</title>
+        </head>
+        <body>
+            <h1 id="title"Trainess></h1>
+            <div class="classediv">
+                <p>Front</p>
+            </div>
+            <div class="classediv">
+                <p>Front</p>
+            </div>
+            <button id="botao">Clique aqui</button>
+            <script src="index.js"> </script>
+        </body>
+        </html>
      
-    let myBtn = document.getElementById('botao')
+     //no index.js
+        let myBtn = document.getElementById('botao')
 
-    console.log(myBtn)
-    myBtn.innerText = 'Oh botao'
+        console.log(myBtn)
+        myBtn.innerText = 'Oh botao'
 
-    // quando busca por className retorna um array pq varias podem usar o mesmo nome de classe
-          let container = document.getElementsByClassName("classediv")
-          console.log(container)
-          console.log(container[0])
+        // quando busca por className retorna um array pq varias podem usar o mesmo nome de classe
+              let container = document.getElementsByClassName("classediv")
+              console.log(container)
+              console.log(container[0])
 
-    // alterando em tempo de execucao
-          container[0].innerHTML = container[0].innerHTML + '<span>Aqui eh um outro texto dentro do span</span>'
+        // alterando em tempo de execucao
+              container[0].innerHTML = container[0].innerHTML + '<span>Aqui eh um outro texto dentro do span</span>'
 
-    myBtn.addEventListener('click', (evento) => {
-        console.log('clicou')
-        container[1].innerHTML = container[1].innerHTML + '<span> Pará </span>'
-    })
+        myBtn.addEventListener('click', (evento) => {
+            console.log('clicou')
+            container[1].innerHTML = container[1].innerHTML + '<span> Pará </span>'
+        })
 
 
-    let novoSpan = document.createElement('span')
-    novoSpan.innerText = 'Texto no novo SPAN'
+        let novoSpan = document.createElement('span')
+        novoSpan.innerText = 'Texto no novo SPAN'
 
-    // fazendo apenas oq está acima, não aconteveria nada..
-    // precisa colocar p algum lugar
-         container[0].append(novoSpan)
+        // fazendo apenas oq está acima, não aconteveria nada..
+        // precisa colocar p algum lugar
+             container[0].append(novoSpan)
 
-    // TUDO ISSO NÃO É MTO PERFORMÁTICO, é bem "Vanilão"
+        // TUDO ISSO NÃO É MTO PERFORMÁTICO, é bem "Vanilão"
         
   ----------------------------------------------------------------------------------
     -> REACT
